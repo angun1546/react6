@@ -1,3 +1,3 @@
 import "./Card.css"
-export function Card() 
-{ return (<><div className="card">Component</div></>) }
+export function Card({ children }) 
+{ return (<><div className="card">{children}</div></>) }
