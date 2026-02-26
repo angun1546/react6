@@ -1,4 +1,9 @@
-export function Title({ title, text }) {
-    return (<><h2>{title}</h2>
-        <p>{text}</p></>);
+export function Title({ title, text, children }) {
+  return (
+    <>
+      <h2>{title || ""}</h2>
+      <p>{text || ""}</p>
+      {children}
+    </>
+  );
 }
