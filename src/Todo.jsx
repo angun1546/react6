@@ -5,12 +5,15 @@ export function Todo() {
     const [li, setLi] = useState('');
     const [lis, setLis] = useState([]);
     const addLi = () => {
-    if (val === "") return;
-        setLi(val); setVal("")
-    }
+        if (val === "") return;
+        setLi(val);
+        setVal("");
+    };
     const addLis = () => {
-        setLis([...lis, val])
-    }
+        if (val === "") return;
+        setLis([...lis, val]);
+        setVal("");
+    };
     return (<div className="container">
         <div className="input-box">
             <input type="text" className="input-field" value={val} onChange={(e) => setVal(e.target.value)} />
@@ -25,9 +28,13 @@ export function Todo() {
             <li className="list-item">{li}</li>
         </ul>
         <ul className="list-box">
-            {lis.map((el, i) => (
-                <li key={i} className="list-item">{el}</li>
-            ))}
+            {lis.map((el, idx) => {
+                return (
+                    <li key={idx} className="list-item">
+                        {el}
+                    </li>
+                );
+            })}
         </ul>
     </div>
     )
