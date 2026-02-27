@@ -1,0 +1,65 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+  text-align: center;
+}
+
+.control {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  font: inherit;
+  background: #7a0141;
+  border: 1px solid #7a0141;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+  background: #a40256;
+  border-color: #a40256;
+}

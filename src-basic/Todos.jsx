@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
 import "./Todo.css";
 export function Todos() {
+  const [val, setVal] = useState("");
+
   useEffect(() => {
     console.log("🛹🚜🚡🛴-마운트 될 때실행");
   }, []);
 
-  useEffect(()=>{
-    console.log("😀😀😁🤣-렌더링시 실행")
-  })
+  useEffect(() => {
+    console.log("😀😀😁🤣-렌더링시 실행");
+  });
 
+  useEffect(() => {
+    console.log("🍳입력중");
+  }, [val]);
 
-
-  const [val, setVal] = useState("");
   const [li, setLi] = useState([]);
   const addLi = () => {
     setLi([...li, val]);

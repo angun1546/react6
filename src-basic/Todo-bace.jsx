@@ -10,9 +10,7 @@ export function Todo() {
     setVal("");
   };
   const addLis = () => {
-    if (val === "") return;
-    setLis([...lis, val]);
-    setVal('')
+    setLis([...lis,val]);
   };
   return (
     <div className="container">
@@ -29,13 +27,7 @@ export function Todo() {
         <li className="list-item">{li}</li>
       </ul>
       <ul className="list-box">
-        {lis.map((el, idx) => {
-          return (
-            <li key={idx} className="list-item">
-              {el}
-            </li>
-          );
-        })}
+        <li className="list-item">{lis}</li>
       </ul>
     </div>
   );
